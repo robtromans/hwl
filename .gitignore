@@ -1,0 +1,5 @@
+.idea
+vendor
+.vagrant
+Vagrantfile
+phpunit.phar
