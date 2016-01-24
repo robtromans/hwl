@@ -1,4 +1,5 @@
 <?php
+
 namespace Hwl\Service;
 
 class DeliveryService implements DeliveryInterface {

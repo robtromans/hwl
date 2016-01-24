@@ -1,4 +1,5 @@
 <?php
+
 namespace Hwl\Service;
 
 /**
@@ -9,14 +10,26 @@ namespace Hwl\Service;
  * @package Hwl\Service
  */
 
-class GTINService {
+class GTINService implements GTINInterface {
 
+    /**
+     * @var $gtn8
+     */
     protected $gtn8;
 
+    /**
+     * @var $gtn12
+     */
     protected $gtn12;
 
+    /**
+     * @var $gtn13
+     */
     protected $gtn13;
 
+    /**
+     * @var $gtn14
+     */
     protected $gtn14;
 
     /**
@@ -76,41 +89,65 @@ class GTINService {
         return (ceil($sum / 10) *10);
     }
 
+    /**
+     * @param $digits
+     */
     public function setGtn8($digits)
     {
         $this->gtn8 = $digits;
     }
 
+    /**
+     * @return mixed
+     */
     public function getGtn8()
     {
         return $this->gtn8;
     }
 
+    /**
+     * @param $digits
+     */
     public function setGtn12($digits)
     {
         $this->gtn12 = $digits;
     }
 
+    /**
+     * @return mixed
+     */
     public function getGtn12()
     {
         return $this->gtn12;
     }
 
+    /**
+     * @param $digits
+     */
     public function setGtn13($digits)
     {
         $this->gtn13 = $digits;
     }
 
+    /**
+     * @return mixed
+     */
     public function getGtn13()
     {
         return $this->gtn13;
     }
 
+    /**
+     * @param $digits
+     */
     public function setGtn14($digits)
     {
         $this->gtn14 = $digits;
     }
 
+    /**
+     * @return mixed
+     */
     public function getGtn14()
     {
         return $this->gtn14;
