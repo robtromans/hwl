@@ -118,6 +118,9 @@ class Operations {
         return $this->gtinService->getGtn14();
     }
 
+    /**
+     * @return array
+     */
     public function getErrors()
     {
         return $this->errors;
@@ -133,24 +136,39 @@ class Operations {
         return true;
     }
 
+    /**
+     * @param $digits
+     * @return bool
+     */
     protected function calculateGTIN12($digits)
     {
         $this->gtinService->setGtn12($this->gtinService->gtn12CheckDigit($digits));
         return true;
     }
 
+    /**
+     * @param $digits
+     * @return bool
+     */
     protected function calculateGTIN13($digits)
     {
         $this->gtinService->setGtn13($this->gtinService->gtn13CheckDigit($digits));
         return true;
     }
 
+    /**
+     * @param $digits
+     * @return bool
+     */
     protected function calculateGTIN14($digits)
     {
         $this->gtinService->setGtn14($this->gtinService->gtn14CheckDigit($digits));
         return true;
     }
 
+    /**
+     * @param $error
+     */
     protected function logErrors($error)
     {
         $this->errors[] = $error;
